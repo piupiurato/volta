@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Você</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 700px;
+      background: #ffffffdd;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #d6336c;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-style: italic;
+      color: #777;
+    }
+
+    audio {
+      margin-top: 20px;
+      outline: none;
+    }
+
+    video {
+      margin-top: 30px;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mesmo que você tenha me bloqueado...</h1>
+
+    <audio controls autoplay loop id="audio">
+      <source src="musica2.mp3" type="audio/mpeg" />
+      Seu navegador não suporta áudio.
+    </audio>
+
+    <p>Meu coração ainda fala com o seu.</p>
+
+    <p>Oi...</p>
+    <p>Eu sei que talvez você nem queira mais ouvir nada de mim. E eu entendo…</p>
+    <p>Só que mesmo assim, eu precisava deixar o que sinto em algum lugar.</p>
+    <p>Fiz besteiras, sim. Errei. Agi por impulso.<br />Mas nunca foi por maldade. E muito menos pra te ferir.</p>
+    <p>Desde que te conheci, minha vida ficou diferente.<br />Você me fez sentir coisas que eu nunca tinha sentido.</p>
+    <p>E mesmo agora, depois de tudo, o que eu carrego dentro de mim por você ainda é amor.</p>
+    <p>Eu não fiz nada pra te impressionar.<br />Não fiz esse texto, nem nenhum gesto, pra jogar na tua cara depois.</p>
+    <p>Eu fiz porque foi o que meu coração pediu.</p>
+    <p>E mesmo que você nunca mais queira falar comigo…<br />Eu vou continuar te guardando com carinho, sem mágoa, sem orgulho.</p>
+    <p>Se um dia teu coração voltar a me procurar,<br />ele ainda vai me encontrar aqui.</p>
+    <p>Com verdade. Com respeito. Com amor.</p>
+
+    <video controls id="video">
+      <source src="video-deliane.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos.
+    </video>
+
+    <footer>– Rúben 💙</footer>
+  </div>
+
+  <script>
+    const video = document.getElementById('video');
+    const audio = document.getElementById('audio');
+
+    video.addEventListener('play', () => {
+      if (!audio.paused) {
+        audio.pause();
+      }
+    });
+  </script>
+</body>
+</html>
